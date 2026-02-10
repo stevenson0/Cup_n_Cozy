@@ -47,7 +47,46 @@ nav {
 
 /* Header */
 header {
-    padding: 4rem 0 2rem;
+    padding: 2rem 0 2rem;
+}
+
+.header-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: var(--text-black);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-gold);
+}
+
+.hero-logo-box {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid var(--accent-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-logo {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--bg-white);
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.hero-tagline {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
 }
 
 h1 {
@@ -84,6 +123,24 @@ header p {
     transition: var(--transition);
 }
 
+.item-with-img {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.menu-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: var(--border-light);
+}
+
+.item-details {
+    flex: 1;
+}
+
 .item-header {
     display: flex;
     justify-content: space-between;
@@ -100,7 +157,7 @@ header p {
 .item-price {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--muted-grey);
+    color: var(--accent-gold);
 }
 
 .item-desc {
