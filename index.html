@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cup & Cozy | Café & Fast Good</title>
+    <meta name="description" content="Cup & Cozy Café in Uppal, Hyderabad — Pizzas, Burgers, Sandwiches, Cold Coffees, Mocktails & more. Open daily 11 AM–10:30 PM.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="Cafe_Logo.jpeg">
+    <link rel="apple-touch-icon" href="Cafe_Logo.jpeg">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <!-- ========== NAV ========== -->
-    <nav>
+    <nav id="mainNav">
         <div class="nav-inner">
             <div class="nav-logo">
                 <a href="#">
-                    <img src="Cafe_Logo.jpeg" alt="Cup & Cozy" class="nav-logo-img">
+                    <img src="Cafe_Logo.jpeg" alt="Cup & Cozy" class="logo-img">
                 </a>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="#about" data-nav="about">About</a>
                 <a href="#menu" data-nav="menu">Menu</a>
                 <a href="#faq" data-nav="faq">FAQ</a>
@@ -36,7 +38,7 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
                     </a>
                 </div>
-                <button class="nav-toggle" aria-label="Menu">
+                <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -51,23 +53,17 @@
         </div>
         <div class="hero-content">
             <span class="status-badge" id="statusBadge">● Open now</span>
-            <h1>Cup & Cozy</h1>
-            <p class="hero-subtitle">Café & Fast Good</p>
+            <h1>Cup &amp; Cozy</h1>
+            <p class="hero-subtitle">Café &amp; Fast Good</p>
             <div class="hero-hours">
-                <span>Monday — Sunday</span>
-                <span>7:00 AM — 12:00 AM</span>
+                <span>Daily</span>
+                <span>11:00 AM — 10:30 PM</span>
             </div>
             <div class="hero-delivery">
                 <span class="delivery-label">Order online via</span>
                 <div class="delivery-btns">
-                    <a href="https://www.swiggy.com/search?query=cup+%26+cozy+uppal" target="_blank" class="delivery-btn swiggy-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-                        Swiggy
-                    </a>
-                    <a href="https://www.zomato.com/hyderabad/search?q=cup+and+cozy+uppal" target="_blank" class="delivery-btn zomato-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-                        Zomato
-                    </a>
+                    <a href="https://www.swiggy.com/search?query=cup+cozy+uppal+hyderabad" target="_blank" class="delivery-btn swiggy-btn">🛵 Swiggy</a>
+                    <a href="https://www.zomato.com/hyderabad/search?q=cup+cozy+uppal" target="_blank" class="delivery-btn zomato-btn">🍽 Zomato</a>
                 </div>
             </div>
         </div>
@@ -80,7 +76,7 @@
                 <div class="section-text" data-scroll="left">
                     <span class="section-label">Our Concept</span>
                     <h2>Where every bite feels like home.</h2>
-                    <p>Cup & Cozy is a cozy café in the heart of the city, serving wood-fired pizzas, gourmet burgers, fresh sandwiches, and a wide range of beverages since 2026.</p>
+                    <p>Cup &amp; Cozy is a cozy café in the heart of Uppal, serving wood-fired pizzas, gourmet burgers, fresh sandwiches, and a wide range of beverages since 2026.</p>
                     <p>We believe in quality ingredients, bold flavors, and creating a space where you can unwind, catch up with friends, or grab a quick bite — any time of day.</p>
                     <a href="#menu" class="btn-outline">View our menu</a>
                 </div>
@@ -97,10 +93,13 @@
             <div class="section-header" data-scroll="fade">
                 <span class="section-label">What we serve</span>
                 <h2>Our Menu</h2>
-                <p class="menu-note">Please order at counter</p>
             </div>
 
-            <!-- Menu filter tabs -->
+            <div class="order-banner">
+                <p>📢 <strong>Please order at counter</strong> — Thank you!</p>
+            </div>
+
+            <!-- Filter Tabs -->
             <div class="menu-tabs" data-scroll="fade">
                 <button class="menu-tab active" data-filter="all">All</button>
                 <button class="menu-tab" data-filter="food">Food</button>
@@ -246,11 +245,11 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Is there WiFi available? <span class="faq-arrow">↓</span></button>
-                    <div class="faq-answer"><p>Yes, we have high-speed fiber WiFi for all our guests. Ask the counter for the password.</p></div>
+                    <div class="faq-answer"><p>Yes, we have high-speed fiber WiFi for all our guests. Ask at the counter for the password.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Do you offer vegetarian / vegan options? <span class="faq-arrow">↓</span></button>
-                    <div class="faq-answer"><p>Absolutely! We have a wide range of vegetarian options including pizzas, sandwiches, wraps, and more. Most items can be customized.</p></div>
+                    <button class="faq-question">Do you offer vegetarian options? <span class="faq-arrow">↓</span></button>
+                    <div class="faq-answer"><p>Absolutely! We have a wide range of vegetarian options including pizzas, sandwiches, wraps, and more. Look for the green dot 🟢 on the menu.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Is there parking available? <span class="faq-arrow">↓</span></button>
@@ -258,11 +257,11 @@
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Do you take orders for delivery? <span class="faq-arrow">↓</span></button>
-                    <div class="faq-answer"><p>Yes, we're available on Zomato and Swiggy. You can also order directly through our WhatsApp button.</p></div>
+                    <div class="faq-answer"><p>Yes! We're available on Zomato and Swiggy. You can also reach us via WhatsApp.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Can I host a small event or meetup? <span class="faq-arrow">↓</span></button>
-                    <div class="faq-answer"><p>Yes! Reach out to us via the contact form or WhatsApp and we'll help you plan it.</p></div>
+                    <div class="faq-answer"><p>Yes! Reach out to us via the contact form or WhatsApp and we'll be happy to help you plan it.</p></div>
                 </div>
             </div>
         </div>
@@ -279,7 +278,7 @@
                 <div class="reviews-track" id="reviewsTrack">
                     <div class="review-card">
                         <div class="review-stars">★★★★★</div>
-                        <p class="review-text">"The wood-fired pizza here is incredible. Best place in town to chill with friends."</p>
+                        <p class="review-text">"The wood-fired pizza here is incredible. Best place in Uppal to chill with friends."</p>
                         <span class="review-author">— Arjun M.</span>
                     </div>
                     <div class="review-card">
@@ -303,7 +302,11 @@
                         <span class="review-author">— Ankit R.</span>
                     </div>
                 </div>
-                <div class="reviews-dots" id="reviewsDots"></div>
+                <div class="reviews-nav">
+                    <button class="reviews-arrow reviews-prev" id="reviewsPrev" aria-label="Previous">&#8592;</button>
+                    <div class="reviews-dots" id="reviewsDots"></div>
+                    <button class="reviews-arrow reviews-next" id="reviewsNext" aria-label="Next">&#8594;</button>
+                </div>
             </div>
         </div>
     </section>
@@ -314,26 +317,18 @@
             <div class="section-header" data-scroll="fade">
                 <span class="section-label">Follow us</span>
                 <h2>From Our Instagram</h2>
-                <p class="instagram-note"><a href="https://www.instagram.com/cup_n_cozy.uppal?igsh=OXJtYnZ2eHg3bzdh" target="_blank">@cup_n_cozy.uppal</a></p>
+                <p class="instagram-note">
+                    <a href="https://www.instagram.com/cup_n_cozy.uppal?igsh=OXJtYnZ2eHg3bzdh" target="_blank">@cup_n_cozy.uppal</a>
+                </p>
             </div>
-
-            <!-- ============================================================
-                 ELFSIGHT INSTAGRAM FEED
-                 Paste your two Elfsight lines here — replace the lines below:
-
-                 <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                 <div class="elfsight-app-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" data-elfsight-app-lazy></div>
-
-                 Both lines go inside the .elfsight-wrap div below.
-            ============================================================ -->
-            <div class="elfsight-wrap" data-scroll="fade">
-                <!-- PASTE YOUR ELFSIGHT CODE HERE -->
+            <div class="insta-grid" id="instaGrid" data-scroll="fade">
+                <!-- Posts load here via JS once INSTA_TOKEN is set, or Elfsight embed goes here -->
                 <div class="insta-placeholder">
-                    📸 Paste your Elfsight embed code here to show your latest Instagram posts.<br>
-                    <a href="https://www.instagram.com/cup_n_cozy.uppal?igsh=OXJtYnZ2eHg3bzdh" target="_blank">Follow us @cup_n_cozy.uppal</a>
+                    <div class="insta-placeholder-icon">📸</div>
+                    <p>Follow us for the latest updates!</p>
+                    <a href="https://www.instagram.com/cup_n_cozy.uppal?igsh=OXJtYnZ2eHg3bzdh" target="_blank" class="btn-outline" style="margin-top:1rem;display:inline-block;">@cup_n_cozy.uppal</a>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -344,7 +339,7 @@
             <div class="section-grid reverse">
                 <div class="section-text" data-scroll="left">
                     <span class="section-label">Stay cozy</span>
-                    <h2>The Vibe & Atmosphere</h2>
+                    <h2>The Vibe &amp; Atmosphere</h2>
                     <p>Monochrome walls, fast fiber, and zero noise. We built this for students and food lovers who need a great meal without the clutter.</p>
                     <p>Our space is designed to be warm and inviting — a second home where you can focus, unwind, or share a meal with friends.</p>
                     <p class="ambiance-note">No reservations needed — just walk in and make yourself at home.</p>
@@ -363,21 +358,23 @@
                 <span class="section-label">Get in touch</span>
                 <h2>Find Us</h2>
             </div>
-
             <div class="contact-grid">
                 <div class="contact-info" data-scroll="left">
                     <div class="contact-block">
                         <h4>Address</h4>
-                        <p>Prashanth Nagar, Uppal, Hyderabad, Telangana 500039</p>
+                        <p>Prashanth Nagar, Uppal,<br>Hyderabad, Telangana 500039</p>
                     </div>
                     <div class="contact-block">
                         <h4>Hours</h4>
-                        <p>Monday — Saturday: 7:00 AM — 12:00 AM</p>
-                        <p>Sunday: 8:00 AM — 11:00 PM</p>
+                        <p>Daily — 11:00 AM to 10:30 PM</p>
                     </div>
                     <div class="contact-block">
-                        <h4>Phone</h4>
-                        <p><a href="tel:+919876543210" class="contact-phone">+91 98765 43210</a></p>
+                        <h4>Email</h4>
+                        <p><a href="mailto:cupandcozyuppal@gmail.com" class="contact-link">cupandcozyuppal@gmail.com</a></p>
+                    </div>
+                    <div class="contact-block">
+                        <h4>WhatsApp / Phone</h4>
+                        <p><a href="https://wa.me/919876543210" target="_blank" class="contact-link">+91 98765 43210</a></p>
                     </div>
                     <div class="contact-block">
                         <h4>Follow us</h4>
@@ -387,33 +384,34 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="contact-block">
                         <h4>Find us on the map</h4>
                         <div class="map-container">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d78.5588!3d17.3957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99004db60523%3A0xd25544ab30a2bbf2!2sCup%20%26%20Cozy!5e0!3m2!1sen!2sin!4v1719000000000"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.179!2d78.555!3d17.398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99004db60523%3A0xd25544ab30a2bbf2!2sCup%20%26%20Cozy!5e0!3m2!1sen!2sin!4v1"
                                 width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
                             </iframe>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-form" data-scroll="right">
+                <div class="contact-form-wrap" data-scroll="right">
                     <h4>Send us a message</h4>
+                    <p class="form-sub">We'll get back to you within a few hours.</p>
                     <!--
-                        FORMSPREE SETUP (free, takes 2 minutes):
-                        1. Go to https://formspree.io and sign up free
-                        2. Click "New Form" → name it "Cup & Cozy Contact" → use email: cupandcozyuppal@gmail.com
-                        3. Copy your form endpoint (looks like: https://formspree.io/f/xyzabcde)
-                        4. Replace YOUR_FORMSPREE_ID below with just the ID part (e.g. xyzabcde)
+                        FORMSPREE SETUP (free, 2 mins):
+                        1. Go to https://formspree.io → Sign up
+                        2. New Form → name "Cup & Cozy" → notification email: cupandcozyuppal@gmail.com
+                        3. Copy the form ID (e.g. xyzabcde from https://formspree.io/f/xyzabcde)
+                        4. Replace YOUR_FORMSPREE_ID below with that ID
                     -->
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                        <button type="submit" class="btn-solid" id="formSubmitBtn">Send</button>
-                        <p class="form-status" id="formStatus"></p>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+                        <input type="text" name="name" placeholder="Your name" required autocomplete="name">
+                        <input type="email" name="email" placeholder="Your email" required autocomplete="email">
+                        <input type="tel" name="phone" placeholder="Phone number (optional)" autocomplete="tel">
+                        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+                        <button type="submit" class="btn-solid" id="formSubmitBtn">Send Message</button>
+                        <p class="form-status" id="formStatus" role="alert"></p>
                     </form>
                 </div>
             </div>
@@ -422,8 +420,10 @@
 
     <!-- ========== FOOTER ========== -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 by Cup & Cozy. All rights reserved.</p>
+        <div class="container footer-inner">
+            <img src="Cafe_Logo.jpeg" alt="Cup & Cozy" class="footer-logo">
+            <p>&copy; 2026 Cup &amp; Cozy. All rights reserved.</p>
+            <p class="footer-address">Prashanth Nagar, Uppal, Hyderabad</p>
         </div>
     </footer>
 
@@ -438,247 +438,275 @@
     </a>
 
     <!-- ========== LIGHTBOX ========== -->
-    <div class="lightbox" id="lightbox">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
         <button class="lightbox-close" aria-label="Close">&times;</button>
         <img class="lightbox-img" id="lightboxImg" alt="Enlarged view">
     </div>
 
     <!-- ========== SCRIPTS ========== -->
     <script>
-        // ── Nav Toggle ──
-        document.querySelector('.nav-toggle')?.addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('open');
+    // ── Dark Mode (runs first to avoid flash) ──
+    (function() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const stored = localStorage.getItem('theme');
+        const isDark = stored ? stored === 'dark' : prefersDark;
+        if (isDark) document.documentElement.classList.add('dark');
+    })();
+    </script>
+    <script>
+    // ── Nav Toggle (mobile) ──
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle?.addEventListener('click', function() {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks?.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // ── Dark Mode Toggle ──
+    document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme',
+            document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // ── Nav scroll shadow ──
+    window.addEventListener('scroll', () => {
+        document.getElementById('mainNav')?.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Active Nav on Scroll ──
+    (function() {
+        const sections = ['about','menu','faq','contact'];
+        const links = document.querySelectorAll('.nav-links a[data-nav]');
+        function update() {
+            let current = '';
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= 130) current = id;
+            });
+            links.forEach(l => l.classList.toggle('active', l.dataset.nav === current));
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
+
+    // ── Scroll Animations ──
+    (function() {
+        const els = document.querySelectorAll('[data-scroll]');
+        if (!els.length || !window.IntersectionObserver) {
+            els.forEach(el => el.classList.add('visible'));
+            return;
+        }
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(el => obs.observe(el));
+    })();
+
+    // ── Live Open / Closed Badge ──
+    (function() {
+        const badge = document.getElementById('statusBadge');
+        if (!badge) return;
+        function update() {
+            const now = new Date();
+            const mins = now.getHours() * 60 + now.getMinutes();
+            const open = mins >= 660 && mins < 1350; // 11:00 AM (660) to 10:30 PM (1350)
+            badge.textContent = open ? '● Open now' : '● Closed now';
+            badge.className = 'status-badge ' + (open ? 'open' : 'closed');
+        }
+        update();
+        setInterval(update, 30000);
+    })();
+
+    // ── Back to Top ──
+    (function() {
+        const btn = document.getElementById('backToTop');
+        if (!btn) return;
+        window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 500), { passive: true });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    // ── Lightbox ──
+    (function() {
+        const box = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        document.querySelectorAll('.section-image img').forEach(el => {
+            el.style.cursor = 'zoom-in';
+            el.addEventListener('click', () => { img.src = el.src; box.classList.add('active'); });
+        });
+        box?.querySelector('.lightbox-close')?.addEventListener('click', () => box.classList.remove('active'));
+        box?.addEventListener('click', e => { if (e.target === box) box.classList.remove('active'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') box?.classList.remove('active'); });
+    })();
+
+    // ── FAQ Accordion ──
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+
+    // ── Reviews Carousel (with prev/next + dots + auto + pause on hover) ──
+    (function() {
+        const track  = document.getElementById('reviewsTrack');
+        const dotsEl = document.getElementById('reviewsDots');
+        const prevBtn = document.getElementById('reviewsPrev');
+        const nextBtn = document.getElementById('reviewsNext');
+        if (!track) return;
+        const cards = track.querySelectorAll('.review-card');
+        const total = cards.length;
+        let idx = 0, timer;
+
+        cards.forEach((_, i) => {
+            const d = document.createElement('button');
+            d.className = 'review-dot' + (i === 0 ? ' active' : '');
+            d.setAttribute('aria-label', 'Review ' + (i + 1));
+            d.addEventListener('click', () => goTo(i));
+            dotsEl?.appendChild(d);
         });
 
-        // ── Close nav on link click (mobile) ──
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('open');
-            });
+        function goTo(i) {
+            idx = (i + total) % total;
+            track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+            dotsEl?.querySelectorAll('.review-dot').forEach((d, j) => d.classList.toggle('active', j === idx));
+        }
+
+        function startAuto() { timer = setInterval(() => goTo(idx + 1), 5000); }
+        function stopAuto()  { clearInterval(timer); }
+
+        prevBtn?.addEventListener('click', () => { stopAuto(); goTo(idx - 1); startAuto(); });
+        nextBtn?.addEventListener('click', () => { stopAuto(); goTo(idx + 1); startAuto(); });
+        track.addEventListener('mouseenter', stopAuto);
+        track.addEventListener('mouseleave', startAuto);
+
+        // Swipe support
+        let startX = 0;
+        track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) { stopAuto(); goTo(diff > 0 ? idx + 1 : idx - 1); startAuto(); }
         });
 
-        // ── Dark Mode ──
-        (function() {
-            const toggle = document.querySelector('.theme-toggle');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const stored = localStorage.getItem('theme');
-            const isDark = stored ? stored === 'dark' : prefersDark;
-            if (isDark) document.documentElement.classList.add('dark');
-            toggle?.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme',
-                    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-                );
+        startAuto();
+    })();
+
+    // ── Menu Filter Tabs ──
+    (function() {
+        const tabs = document.querySelectorAll('.menu-tab');
+        const cats = document.querySelectorAll('.menu-category');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const f = tab.dataset.filter;
+                cats.forEach(c => { c.style.display = (f === 'all' || c.dataset.group === f) ? '' : 'none'; });
             });
-        })();
+        });
+    })();
 
-        // ── Active Nav Highlight on Scroll ──
-        (function() {
-            const sections = ['about', 'menu', 'faq', 'contact'];
-            const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+    // ── Instagram Feed via API ──
+    (function() {
+        const grid = document.getElementById('instaGrid');
+        if (!grid) return;
 
-            function updateActiveNav() {
-                let current = '';
-                sections.forEach(id => {
-                    const el = document.getElementById(id);
-                    if (el) {
-                        const rect = el.getBoundingClientRect();
-                        if (rect.top <= 120 && rect.bottom >= 120) current = id;
-                    }
+        // ▼▼▼ PASTE YOUR INSTAGRAM TOKEN HERE (from Facebook Developer portal) ▼▼▼
+        const INSTA_TOKEN = '';
+        // ▲▲▲ ──────────────────────────────────────────────────────────────── ▲▲▲
+
+        if (!INSTA_TOKEN) return; // Shows the nice placeholder until token is added
+
+        grid.innerHTML = '<div class="insta-loading">Loading posts...</div>';
+
+        fetch('https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,media_type,thumbnail_url&limit=9&access_token=' + INSTA_TOKEN)
+            .then(r => r.json())
+            .then(data => {
+                const posts = (data.data || []).slice(0, 9);
+                if (!posts.length) { grid.innerHTML = ''; return; }
+                grid.innerHTML = '';
+                grid.classList.add('has-posts');
+                posts.forEach(post => {
+                    const url = post.media_type === 'VIDEO' ? (post.thumbnail_url || post.media_url) : post.media_url;
+                    const a = document.createElement('a');
+                    a.href = post.permalink;
+                    a.target = '_blank';
+                    a.className = 'insta-item';
+                    a.setAttribute('aria-label', post.caption ? post.caption.slice(0,60) : 'Instagram post');
+                    a.innerHTML = '<img src="' + url + '" alt="" loading="lazy"><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div>';
+                    grid.appendChild(a);
                 });
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.dataset.nav === current);
-                });
+            })
+            .catch(() => { grid.innerHTML = ''; }); // silently fail — placeholder stays if error
+    })();
+
+    // ── Contact Form (Formspree AJAX) ──
+    (function() {
+        const form   = document.getElementById('contactForm');
+        const btn    = document.getElementById('formSubmitBtn');
+        const status = document.getElementById('formStatus');
+        if (!form) return;
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const action = form.getAttribute('action');
+
+            // Fallback if Formspree not yet configured
+            if (!action || action.includes('YOUR_FORMSPREE_ID')) {
+                status.textContent = '✓ Thanks! We\'ll get back to you soon. (Set up Formspree to receive emails.)';
+                status.className = 'form-status success';
+                form.reset();
+                return;
             }
 
-            window.addEventListener('scroll', updateActiveNav, { passive: true });
-            updateActiveNav();
-        })();
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+            status.textContent = '';
+            status.className = 'form-status';
 
-        // ── Scroll Animations ──
-        (function() {
-            const els = document.querySelectorAll('[data-scroll]');
-            if (!els.length) return;
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
+            try {
+                const res = await fetch(action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
                 });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            els.forEach(el => observer.observe(el));
-        })();
-
-        // ── Back to Top ──
-        (function() {
-            const btn = document.getElementById('backToTop');
-            if (!btn) return;
-            window.addEventListener('scroll', () => {
-                btn.classList.toggle('show', window.scrollY > 600);
-            }, { passive: true });
-            btn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        })();
-
-        // ── Live Open/Closed Status ──
-        (function() {
-            const badge = document.getElementById('statusBadge');
-            if (!badge) return;
-            function updateStatus() {
-                const now = new Date();
-                const day = now.getDay();
-                const total = now.getHours() * 60 + now.getMinutes();
-                let open = false;
-                if (day === 0) {
-                    open = total >= 480 && total < 1380; // Sun 8am–11pm
-                } else {
-                    open = total >= 420 && total < 1440; // Mon–Sat 7am–12am
-                }
-                badge.textContent = open ? '● Open now' : '● Closed now';
-                badge.className = 'status-badge ' + (open ? 'open' : 'closed');
-            }
-            updateStatus();
-            setInterval(updateStatus, 60000);
-        })();
-
-        // ── Lightbox ──
-        (function() {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightboxImg');
-            const closeBtn = lightbox?.querySelector('.lightbox-close');
-            document.querySelectorAll('.section-image img, .hero-img').forEach(img => {
-                img.style.cursor = 'pointer';
-                img.addEventListener('click', () => {
-                    lightboxImg.src = img.src;
-                    lightbox.classList.add('active');
-                });
-            });
-            closeBtn?.addEventListener('click', () => lightbox.classList.remove('active'));
-            lightbox?.addEventListener('click', (e) => {
-                if (e.target === lightbox) lightbox.classList.remove('active');
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') lightbox?.classList.remove('active');
-            });
-        })();
-
-        // ── FAQ Accordion ──
-        (function() {
-            document.querySelectorAll('.faq-question').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const item = btn.closest('.faq-item');
-                    const isOpen = item.classList.contains('open');
-                    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-                    if (!isOpen) item.classList.add('open');
-                });
-            });
-        })();
-
-        // ── Reviews Carousel ──
-        (function() {
-            const track = document.getElementById('reviewsTrack');
-            const dotsContainer = document.getElementById('reviewsDots');
-            if (!track || !dotsContainer) return;
-            const cards = track.querySelectorAll('.review-card');
-            const total = cards.length;
-            let idx = 0;
-            cards.forEach((_, i) => {
-                const dot = document.createElement('button');
-                dot.className = 'review-dot' + (i === 0 ? ' active' : '');
-                dot.setAttribute('aria-label', 'Review ' + (i + 1));
-                dot.addEventListener('click', () => goTo(i));
-                dotsContainer.appendChild(dot);
-            });
-            function goTo(i) {
-                idx = i;
-                track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-                dotsContainer.querySelectorAll('.review-dot').forEach((d, j) => {
-                    d.classList.toggle('active', j === idx);
-                });
-            }
-            let timer = setInterval(() => goTo((idx + 1) % total), 5000);
-            track.addEventListener('mouseenter', () => clearInterval(timer));
-            track.addEventListener('mouseleave', () => {
-                timer = setInterval(() => goTo((idx + 1) % total), 5000);
-            });
-        })();
-
-        // ── Menu Filter Tabs ──
-        (function() {
-            const tabs = document.querySelectorAll('.menu-tab');
-            const categories = document.querySelectorAll('.menu-category');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    const filter = tab.dataset.filter;
-                    categories.forEach(cat => {
-                        if (filter === 'all' || cat.dataset.group === filter) {
-                            cat.style.display = '';
-                        } else {
-                            cat.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        })();
-
-        // ── Contact Form (Formspree AJAX) ──
-        (function() {
-            const form = document.getElementById('contactForm');
-            const btn = document.getElementById('formSubmitBtn');
-            const status = document.getElementById('formStatus');
-            if (!form) return;
-
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const action = form.getAttribute('action');
-                // If Formspree ID not yet set, fall back to alert
-                if (!action || action.includes('YOUR_FORMSPREE_ID')) {
-                    alert("Thanks for reaching out! We'll get back to you soon.");
+                if (res.ok) {
+                    status.textContent = '✓ Message sent! We\'ll get back to you within a few hours.';
+                    status.className = 'form-status success';
                     form.reset();
-                    return;
+                } else {
+                    throw new Error('not ok');
                 }
-                btn.textContent = 'Sending...';
-                btn.disabled = true;
-                try {
-                    const data = new FormData(form);
-                    const res = await fetch(action, {
-                        method: 'POST',
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (res.ok) {
-                        status.textContent = '✓ Message sent! We\'ll get back to you soon.';
-                        status.className = 'form-status success';
-                        form.reset();
-                    } else {
-                        throw new Error();
-                    }
-                } catch {
-                    status.textContent = 'Something went wrong. Please try WhatsApp instead.';
-                    status.className = 'form-status error';
-                } finally {
-                    btn.textContent = 'Send';
-                    btn.disabled = false;
-                }
-            });
-        })();
+            } catch {
+                status.textContent = '✗ Something went wrong. Please WhatsApp us directly.';
+                status.className = 'form-status error';
+            } finally {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+            }
+        });
+    })();
 
-        // ── Parallax ──
-        (function() {
-            const wraps = document.querySelectorAll('.parallax-wrap');
-            if (!wraps.length) return;
-            window.addEventListener('scroll', () => {
-                wraps.forEach(wrap => {
-                    const rect = wrap.getBoundingClientRect();
-                    const bg = wrap.querySelector('.parallax-bg');
-                    if (bg) bg.style.transform = 'translateY(' + (rect.top * 0.3) + 'px)';
-                });
-            }, { passive: true });
-        })();
+    // ── Parallax ──
+    (function() {
+        const wraps = document.querySelectorAll('.parallax-wrap');
+        if (!wraps.length) return;
+        function update() {
+            wraps.forEach(wrap => {
+                const bg = wrap.querySelector('.parallax-bg');
+                if (bg) bg.style.transform = 'translateY(' + (wrap.getBoundingClientRect().top * 0.25) + 'px)';
+            });
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
     </script>
 </body>
 </html>
