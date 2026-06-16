@@ -573,3 +573,22 @@ footer {
         max-width: 100%;
     }
 }
+
+/* ── Inside Cup & Cozy (video section) ── */
+.gallery-video {
+    background: var(--white);
+    transition: background 0.4s;
+}
+.video-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.video-wrap video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
